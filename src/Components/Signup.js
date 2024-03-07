@@ -10,8 +10,22 @@ export default function Signup() {
 
   function add(data)
 {
+  axios.post('http://127.0.0.1:8000/a1/signup/', data, {
+    headers: {
+      'Content-Type': 'application/json',
+      // Add other headers if necessary
+    }
+  })
+  .then(response => {
+    // Handle successful response
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Handle error
+    console.error('Error:', error);
+  });
 
-    axios.post('http://127.0.0.1:8000/a1/signup/',data)
+   // axios.post('http://127.0.0.1:8000/a1/signup/',data) 
     redirect('/login')
     
 }

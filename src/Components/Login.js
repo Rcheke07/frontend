@@ -11,6 +11,20 @@ export default function Login({setLoggedIn}) {
 
      function loginpg(data)
      {
+
+    /*  axios.post('http://127.0.0.1:8000/login/', data, {
+      headers: {
+        'Content-Type': 'application/json',
+        // Add other headers if necessary
+      }
+       }).then(response => {
+      setLoggedIn(response.data.access);
+      navigate('/home');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+    */
         axios.post('http://127.0.0.1:8000/login/',data).then(response=>{
             
             
